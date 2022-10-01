@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.199" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/add_button.xml" value="0.199" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/ic_add_button.xml" value="0.199" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/ic_delete.xml" value="0.219" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.199" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_add.xml" value="0.34427083333333336" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_trip_update.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/fragment_date_picker.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/trip_row.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/alltrip.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/menu.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/trip_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/trip_update_menu.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.219" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.219" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

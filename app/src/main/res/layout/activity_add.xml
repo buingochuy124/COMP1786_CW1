@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+
+    <EditText
+        android:id="@+id/inputDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Click to show date picker"
+        android:inputType="date"
+        android:onClick="showDatePickerDialog"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/btn_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+
+        android:text="Date of the trip"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputDate"
+        app:layout_constraintStart_toStartOf="@+id/inputDestination"
+        app:layout_constraintTop_toBottomOf="@+id/inputDestination" />
+
+    <EditText
+        android:id="@+id/inputDestination"
+        android:layout_width="326dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Destination"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/inputDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="Destination"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputDestination"
+        app:layout_constraintStart_toStartOf="@+id/inputDestination"
+        app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="34dp"
+        android:text="Name"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputName"
+        app:layout_constraintStart_toStartOf="@+id/inputName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="Name of the trip"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:text="Require Risks Assessment"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/inputDate"
+        app:layout_constraintTop_toBottomOf="@+id/inputDate" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="183dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="35dp"
+        android:text="ADD TO DATABASE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputDescription"
+        app:layout_constraintTop_toBottomOf="@+id/inputDescription" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="235dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="17dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/inputDescription"
+        app:layout_constraintStart_toStartOf="@+id/inputDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+
+        <RadioButton
+            android:id="@+id/radioButtonYes"
+            android:layout_width="117dp"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:onClick="RadioButtonClicked"
+            android:text="yes"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="455dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNo"
+
+            android:layout_width="117dp"
+            android:layout_height="match_parent"
+            android:onClick="RadioButtonClicked"
+            android:text="no" />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

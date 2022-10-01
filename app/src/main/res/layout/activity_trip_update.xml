@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripUpdateActivity">
+
+
+    <EditText
+        android:id="@+id/inputDate_Update"
+        android:layout_width="212dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:inputType="date"
+        android:onClick="showDatePickerDialogUpdate"
+        android:text="Click to show date picker"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="13dp"
+        android:text="Date of the trip"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputDate_Update"
+        app:layout_constraintStart_toStartOf="@+id/inputDate_Update"
+        app:layout_constraintTop_toBottomOf="@+id/inputDestination_Update" />
+
+    <EditText
+        android:id="@+id/inputDestination_Update"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Destination"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+    <EditText
+        android:id="@+id/inputDescription_Update"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="text"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Update" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="18dp"
+        android:text="Destination"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputDestination_Update"
+        app:layout_constraintStart_toStartOf="@+id/inputDestination_Update"
+        app:layout_constraintTop_toBottomOf="@+id/inputName_Update" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="13dp"
+        android:text="Name"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputName_Update"
+        app:layout_constraintStart_toStartOf="@+id/inputName_Update"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputName_Update"
+        android:layout_width="315dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name of the trip"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="23dp"
+        android:text="Require Risks Assessment"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup_Update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputDate_Update" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="SAVE"
+        app:layout_constraintBottom_toTopOf="@+id/btn_delete"
+        app:layout_constraintEnd_toEndOf="@+id/btn_delete"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_delete"
+        app:layout_constraintTop_toBottomOf="@+id/inputDescription_Update" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="16dp"
+        android:text="See all Expenses"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputDescription_Update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Update"
+        android:layout_width="221dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/inputDescription_Update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+
+        <RadioButton
+            android:id="@+id/radioButtonYes"
+            android:layout_width="117dp"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:onClick="RadioButtonClicked2"
+            android:text="yes"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="455dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNo"
+
+            android:layout_width="117dp"
+            android:layout_height="match_parent"
+            android:onClick="RadioButtonClicked2"
+            android:text="no" />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
