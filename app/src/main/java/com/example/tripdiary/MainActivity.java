@@ -1,14 +1,5 @@
 package com.example.tripdiary;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.PopupMenu;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -18,28 +9,32 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-
     RecyclerView recyclerView;
     FloatingActionButton add_button;
     DbHelper db;
-    ArrayList<String> tripId, tripName, tripDestination, tripDate,tripRequireAssessement,tripDescription;
-    AddActivity activity;
+    ArrayList<String> tripId, tripName, tripDestination, tripDate, tripRequireAssessement, tripDescription;
     TripAdapter tripAdapter;
-    AlertDialog.Builder builder;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        recyclerView = findViewById(R.id.recylerView);
+        recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.add_button);
 
         add_button.setOnClickListener(new View.OnClickListener() {
@@ -47,12 +42,33 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AddActivity.class);
                 // startActivity(intent,);
-                startActivityForResult(intent,1);
+                startActivityForResult(intent, 1);
             }
         });
 
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home_screen:
+                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                        startActivityForResult(intent, 1);
+                        return true;
+                    case R.id.search_screen:
+                        Intent intent2 = new Intent(MainActivity.this, SearchActivity.class);
+                        startActivityForResult(intent2, 1);
+                        return true;
+                    case R.id.upload_screen:
+                        Intent intent3 = new Intent(MainActivity.this, UploadActivity.class);
+                        startActivityForResult(intent3, 1);
+                        return true;
 
+                }
+                return false;
+            }
+        });
 
 
         db = new DbHelper(MainActivity.this);
@@ -66,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         TripsInArrays();
 
+
         tripAdapter = new TripAdapter(
                 MainActivity.this,
                 this,
@@ -78,7 +95,9 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(tripAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -98,15 +117,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1){
+        if (requestCode == 1) {
             recreate();
         }
     }
-    void TripsInArrays(){
+
+    void TripsInArrays() {
         Cursor cursor = db.readAllTrip();
 
-        if (cursor.getCount() != 0){
-            while(cursor.moveToNext()){
+        if (cursor.getCount() != 0) {
+            while (cursor.moveToNext()) {
 
 
                 tripId.add(cursor.getString(0));
@@ -117,8 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 tripDescription.add(cursor.getString(5));
 
             }
-        }
-        else {
+        } else {
             Toast.makeText(this, "There are no trip", Toast.LENGTH_SHORT).show();
         }
     }

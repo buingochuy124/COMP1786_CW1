@@ -3,19 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/AppData/Local/Android/Sdk/platforms/android-32/data/res/drawable/btn_dropdown.xml" value="0.219" />
+        <entry key="..\:/Users/ASUS/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.3625" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.199" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/add_button.xml" value="0.199" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/ic_add_button.xml" value="0.199" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.219" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.219" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/ic_delete.xml" value="0.219" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.199" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_add.xml" value="0.34427083333333336" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_add_expenses.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_expenses.xml" value="0.22" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_expenses2.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_expenses_update.xml" value="0.33" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_search.xml" value="0.33" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_trip_update.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/activity_upload.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/expense2_row.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/expense_row.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/exxpense2_row.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/fragment_date_picker.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/trip_row.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/layout/trip_search_row.xml" value="0.3625" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/alltrip.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/menu.xml" value="0.3614583333333333" />
-        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/trip_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/trip_menu.xml" value="0.176" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/menu/trip_update_menu.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.219" />
         <entry key="..\:/Users/ASUS/Desktop/Materials TOP UP/Mobile/COMP1786_CW1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.219" />
@@ -27,5 +42,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3625" />
+      </ProjectState>
+    </option>
   </component>
 </project>

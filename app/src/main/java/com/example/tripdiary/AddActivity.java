@@ -57,7 +57,7 @@ public class AddActivity extends AppCompatActivity {
                         radioValues = false;
                     }
 
-                     Toast.makeText(AddActivity.this, ""+ radioValues, Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(AddActivity.this, ""+ radioValues, Toast.LENGTH_SHORT).show();
 
                     db.addTrip(
                             nameInput.getText().toString().trim(),

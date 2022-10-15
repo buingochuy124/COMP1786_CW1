@@ -13,21 +13,40 @@
         android:theme="@style/Theme.TripDiary"
         tools:targetApi="31">
         <activity
+            android:name=".ExpensesUpdateActivity"
+            android:label="Expense Update"
+            android:exported="false" />
+        <activity
+            android:name=".UploadActivity"
+            android:exported="false"
+            android:label="Upload" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false"
+            android:label="Search" />
+        <activity
+            android:name=".AddExpensesActivity"
+            android:exported="false"
+            android:label="Add Expense " />
+        <activity
+            android:name=".ExpensesActivity"
+            android:exported="false"
+            android:label="Expense List"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".TripUpdateActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
-            android:label="Update Trip"/>
-
+            android:label="Update Trip"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
-            android:label="Add a Trip"/>
-
+            android:label="Add a Trip"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="All Trip" >
+            android:label="All Trip">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

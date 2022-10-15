@@ -15,28 +15,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class TripAdapter extends RecyclerView.Adapter<TripAdapter.MyViewHolder> {
-
+public class SearchTripAdapter extends RecyclerView.Adapter<SearchTripAdapter.MyViewHolder> {
 
     private Context context;
     Activity activity;
     ArrayList<String> tripId, tripName, tripDestination, tripDate, tripRequireAssessement, tripDescription;
-
     int position;
 
-    @Override
-    public int getItemCount() {
-        return tripName.size();
-    }
 
-    public TripAdapter(Context context,
-                       Activity activity,
-                       ArrayList tripId,
-                       ArrayList tripName,
-                       ArrayList tripDestination,
-                       ArrayList tripDate,
-                       ArrayList tripRequireAssessement,
-                       ArrayList tripDescription) {
+    public SearchTripAdapter(Context context,
+                             SearchActivity searchActivity,
+                             ArrayList<String> tripId,
+                             ArrayList<String> tripName,
+                             ArrayList<String> tripDestination,
+                             ArrayList<String> tripDate,
+                             ArrayList<String> tripRequireAssessement,
+                             ArrayList<String> tripDescription) {
         this.context = context;
         this.activity = activity;
         this.tripId = tripId;
@@ -49,14 +43,14 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.MyViewHolder> 
 
     @NonNull
     @Override
-    public TripAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public SearchTripAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.trip_row, parent, false);
-        return new MyViewHolder(view);
+        View view = inflater.inflate(R.layout.trip_search_row, parent, false);
+        return new SearchTripAdapter.MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TripAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull SearchTripAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         this.position = position;
         holder.trip_id_text.setText(String.valueOf(tripId.get(position)));
         holder.trip_name_text.setText(String.valueOf(tripName.get(position)));
@@ -93,6 +87,11 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.MyViewHolder> 
         });
     }
 
+    @Override
+    public int getItemCount() {
+        return tripId.size();
+    }
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView trip_id_text, trip_name_text, trip_destination_text, trip_date_text, trip_requireAssessement_text;
         LinearLayout mainLayout;
@@ -104,10 +103,8 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.MyViewHolder> 
             trip_destination_text = itemView.findViewById(R.id.trip_destination_text);
             trip_date_text = itemView.findViewById(R.id.trip_date_text);
             trip_requireAssessement_text = itemView.findViewById(R.id.trip_requireAssessement_text);
-            mainLayout = itemView.findViewById(R.id.mainLayout);
+            mainLayout = itemView.findViewById(R.id.tripsearchlayout);
 
         }
     }
-
-
 }

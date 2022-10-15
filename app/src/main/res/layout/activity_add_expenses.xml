@@ -6,4 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".AddExpensesActivity">
 
+    <EditText
+        android:id="@+id/add_expense_time_input"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="63dp"
+        android:ems="10"
+        android:hint="Click to  set time of expense"
+        android:inputType="textPersonName"
+        android:onClick="showDatePickerDialog3"
+        app:layout_constraintBottom_toTopOf="@+id/btn_addExpenseToDb"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="45dp"
+        android:text="Time of expense"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/add_expense_time_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_expense_amount_input" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="251dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginBottom="60dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:viewportWidth="24"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_expense_amount_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:hint="Amount"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Amount"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/add_expense_amount_input"
+        app:layout_constraintStart_toStartOf="@+id/add_expense_amount_input"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+    <Button
+        android:id="@+id/btn_addExpenseToDb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="120dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/add_expense_time_input"
+        app:layout_constraintTop_toBottomOf="@+id/add_expense_time_input" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
