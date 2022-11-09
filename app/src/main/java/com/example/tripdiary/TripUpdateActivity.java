@@ -154,16 +154,15 @@ public class TripUpdateActivity extends AppCompatActivity {
             destinationInput.setText(destination);
             dateInput.setText(date);
             descriptionInput.setText(description);
-            if (requireAssessement.toString() == "true") {
-                RadioButton yes = findViewById(R.id.radioButtonYes);
-                RadioButton no = findViewById(R.id.radioButtonNo);
+            RadioButton yes = findViewById(R.id.radioButtonYes);
+            RadioButton no = findViewById(R.id.radioButtonNo);
+
+            if (Integer.valueOf(requireAssessement) == 1) {
 
                 yes.setChecked(true);
                 no.setChecked(false);
 
             } else {
-                RadioButton yes = findViewById(R.id.radioButtonYes);
-                RadioButton no = findViewById(R.id.radioButtonNo);
                 yes.setChecked(false);
                 no.setChecked(true);
             }

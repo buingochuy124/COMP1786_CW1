@@ -20,6 +20,11 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String COLUMN_DATE = "trip_date";
     private static final String COLUMN_REQUIRE_ASSESSEMENT = "trip_require_assessement";
     private static final String COLUMN_DESCRIPTION = "trip_description";
+    public static final String EXPENSES_TABLE = "expenses_table";
+    public static final String EXPENSES_TYPE = "expenses_type";
+    public static final String EXPENSES_AMOUNT = "expenses_amount";
+    public static final String EXPENSES_TIME = "expenses_time";
+    public static final String TRIP_ID = "tripId";
 
 
     private Context context;
@@ -35,10 +40,10 @@ public class DbHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + TABLE_NAME + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 COLUMN_NAME + " TEXT, " + COLUMN_DESTINATION + " TEXT, " + COLUMN_DATE + " DATETIME," +
                 "" + COLUMN_REQUIRE_ASSESSEMENT + " BOOL, " + COLUMN_DESCRIPTION + " TEXT )";
-        String query2 = "CREATE TABLE expenses_table (id INTEGER  PRIMARY KEY AUTOINCREMENT, " +
-                "expenses_type TEXT, " +
-                "expenses_amount TEXT,  " +
-                "expenses_time DATETIME,     tripId INTEGER,     FOREIGN KEY(tripId)  REFERENCES trip_table(id) )";
+        String query2 = "CREATE TABLE " + EXPENSES_TABLE + " (id INTEGER  PRIMARY KEY AUTOINCREMENT, " +
+                EXPENSES_TYPE + " TEXT, " +
+                EXPENSES_AMOUNT + " TEXT,  " +
+                EXPENSES_TIME + " DATETIME,     " + TRIP_ID + " INTEGER,     FOREIGN KEY(" + TRIP_ID + ")  REFERENCES " + TABLE_NAME + "(id) )";
 
         db.execSQL(query);
         db.execSQL(query2);
@@ -48,7 +53,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
 
-        db.execSQL("DROP TABLE IF EXISTS expenses_table");
+        db.execSQL("DROP TABLE IF EXISTS " + EXPENSES_TABLE);
 
         onCreate(db);
     }
@@ -126,12 +131,12 @@ public class DbHelper extends SQLiteOpenHelper {
     public void AddExpenseTripToDb(String type, String amount, String time, int tripId) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put("expenses_type", type);
-        cv.put("expenses_amount", amount);
-        cv.put("expenses_time", time);
-        cv.put("tripId", tripId);
+        cv.put(EXPENSES_TYPE, type);
+        cv.put(EXPENSES_AMOUNT, amount);
+        cv.put(EXPENSES_TIME, time);
+        cv.put(TRIP_ID, tripId);
 
-        long result = db.insert("expenses_table", null, cv);
+        long result = db.insert(EXPENSES_TABLE, null, cv);
         if (result == -1) {
             Toast.makeText(context, "Insert failed !!!", Toast.LENGTH_SHORT).show();
         } else {
@@ -149,7 +154,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
         Cursor cursor = null;
         if (db != null) {
-            cursor = db.rawQuery("SELECT * FROM expenses_table  where tripId = '" + tripId + "'", null);
+            cursor = db.rawQuery("SELECT * FROM " + EXPENSES_TABLE + "  where " + TRIP_ID + " = '" + tripId + "'", null);
         }
 
 
@@ -232,12 +237,12 @@ public class DbHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put("expenses_type", expenseType);
-        cv.put("expenses_amount", expenseAmount);
-        cv.put("expenses_time", expenseTime);
-        cv.put("tripId", tripId);
+        cv.put(EXPENSES_TYPE, expenseType);
+        cv.put(EXPENSES_AMOUNT, expenseAmount);
+        cv.put(EXPENSES_TIME, expenseTime);
+        cv.put(TRIP_ID, tripId);
 
-        long result = db.update("expenses_table", cv, "id = ?", new String[]{rowId});
+        long result = db.update(EXPENSES_TABLE, cv, "id = ?", new String[]{rowId});
         if (result == -1) {
             Toast.makeText(context, "UPDATE FAIL. SOME THING WRONG !!", Toast.LENGTH_SHORT).show();
         } else {
