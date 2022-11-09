@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 tripDate,
                 tripRequireAssessement,
                 tripDescription);
-
+        
         recyclerView.setAdapter(tripAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 

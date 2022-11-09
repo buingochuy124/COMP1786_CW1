@@ -190,11 +190,13 @@ public class DbHelper extends SQLiteOpenHelper {
     public Cursor SearchTrip(String tripName) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        //String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_NAME + " Like '%" + tripName + "%'";
-        String query = "select * from trip_table  where trip_name like ?";
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_NAME + " Like '%" + tripName + "%'";
+
+
+//        String query = "select * from trip_table  where trip_name like ?";
         Cursor cursor = null;
         if (db != null) {
-            cursor = db.rawQuery(query, new String[]{"%" + tripName + "%"});
+            cursor = db.rawQuery(query, null);
         }
 
         return cursor;

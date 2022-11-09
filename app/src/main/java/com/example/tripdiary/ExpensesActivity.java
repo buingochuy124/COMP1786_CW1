@@ -41,7 +41,7 @@ public class ExpensesActivity extends AppCompatActivity {
 
 
                 intent.putExtra("expensesTripID", String.valueOf(expensesTripID));
-
+                //startActivity(intent);
                 startActivityForResult(intent, 1);
             }
         });

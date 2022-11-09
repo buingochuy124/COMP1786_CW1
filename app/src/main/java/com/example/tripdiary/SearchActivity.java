@@ -35,6 +35,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         recyclerView = findViewById(R.id.SearchRecyclerView);
 
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -64,42 +65,43 @@ public class SearchActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                db = new DbHelper(SearchActivity.this);
+                tripId = new ArrayList<>();
+                tripName = new ArrayList<>();
+                tripDestination = new ArrayList<>();
+                tripDate = new ArrayList<>();
+                tripRequireAssessement = new ArrayList<>();
+                tripDescription = new ArrayList<>();
+
                 tripNametext = findViewById(R.id.search_trip_name);
+                TripsInArrays(tripNametext.getText().toString());
 
-                String text = tripNametext.getText().toString();
-
-
-                // TripsInArrays(text);
             }
         });
 
-        db = new DbHelper(SearchActivity.this);
-        tripId = new ArrayList<>();
-        tripName = new ArrayList<>();
-        tripDestination = new ArrayList<>();
-        tripDate = new ArrayList<>();
-        tripRequireAssessement = new ArrayList<>();
-        tripDescription = new ArrayList<>();
 
-
-        AllTripsInArrays();
-
-        //TripsInArrays(text);
-        //Toast.makeText(this, "" + tripId + tripName + tripDescription + tripDate + tripRequireAssessement + tripDestination, Toast.LENGTH_SHORT).show();
-
-
-        searchTripAdapter = new SearchTripAdapter(
-                SearchActivity.this,
-                this,
-                tripId,
-                tripName,
-                tripDestination,
-                tripDate,
-                tripRequireAssessement,
-                tripDescription);
-
-        recyclerView.setAdapter(searchTripAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
+//
+//        String text = tripNametext.getText().toString();
+//
+//        TripsInArrays(text);
+//
+//        //TripsInArrays(text);
+//        //Toast.makeText(this, "" + tripId + tripName + tripDescription + tripDate + tripRequireAssessement + tripDestination, Toast.LENGTH_SHORT).show();
+//
+//
+//        searchTripAdapter = new SearchTripAdapter(
+//                SearchActivity.this,
+//                this,
+//                tripId,
+//                tripName,
+//                tripDestination,
+//                tripDate,
+//                tripRequireAssessement,
+//                tripDescription);
+//
+//        recyclerView.setAdapter(searchTripAdapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
 
     }
 
@@ -120,44 +122,26 @@ public class SearchActivity extends AppCompatActivity {
 
 
             }
-            Toast.makeText(this, "" + tripId + tripName + tripRequireAssessement + tripDestination + tripDescription, Toast.LENGTH_SHORT).show();
 
-//
-//            searchTripAdapter = new SearchTripAdapter(
-//                    SearchActivity.this,
-//                    this,
-//                    tripId,
-//                    tripName,
-//                    tripDestination,
-//                    tripDate,
-//                    tripRequireAssessement,
-//                    tripDescription);
-//
-//            recyclerView.setAdapter(searchTripAdapter);
-//            recyclerView.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
+
+            searchTripAdapter = new SearchTripAdapter(
+                    SearchActivity.this,
+                    this,
+                    tripId,
+                    tripName,
+                    tripDestination,
+                    tripDate,
+                    tripRequireAssessement,
+                    tripDescription);
+
+            recyclerView.setAdapter(searchTripAdapter);
+            recyclerView.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
 
         } else {
             Toast.makeText(this, "There are no trip", Toast.LENGTH_SHORT).show();
+            recreate();
         }
+
     }
 
-    void AllTripsInArrays() {
-        Cursor cursor = db.readAllTrip();
-
-        if (cursor.getCount() != 0) {
-            while (cursor.moveToNext()) {
-
-
-                tripId.add(cursor.getString(0));
-                tripName.add(cursor.getString(1));
-                tripDestination.add(cursor.getString(2));
-                tripDate.add(cursor.getString(3));
-                tripRequireAssessement.add(cursor.getString(4));
-                tripDescription.add(cursor.getString(5));
-
-            }
-        } else {
-            Toast.makeText(this, "There are no trip", Toast.LENGTH_SHORT).show();
-        }
-    }
 }
