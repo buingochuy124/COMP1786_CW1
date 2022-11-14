@@ -51,10 +51,10 @@ public class ExpensesAdapter extends RecyclerView.Adapter<ExpensesAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
 
-        holder.expenses_id_text.setText(String.valueOf(position + 1));
-        holder.expenses_type_text.setText(String.valueOf(expensesType.get(position)));
-        holder.expenses_amount_text.setText(String.valueOf(expensesAmount.get(position)));
-        holder.expenses_time_text.setText(String.valueOf(expensesTime.get(position)));
+        holder.expenses_id_text.setText("No " + (position + 1));
+        holder.expenses_type_text.setText("Type: " + expensesType.get(position));
+        holder.expenses_amount_text.setText("Amount: " + expensesAmount.get(position));
+        holder.expenses_time_text.setText("Date: " + expensesTime.get(position));
 
 
         holder.expenses_layout.setOnClickListener(new View.OnClickListener() {

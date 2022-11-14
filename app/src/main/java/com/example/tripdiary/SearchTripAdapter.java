@@ -52,11 +52,14 @@ public class SearchTripAdapter extends RecyclerView.Adapter<SearchTripAdapter.My
     @Override
     public void onBindViewHolder(@NonNull SearchTripAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         this.position = position;
-        holder.trip_id_text.setText(String.valueOf(tripId.get(position)));
-        holder.trip_name_text.setText(String.valueOf(tripName.get(position)));
-        holder.trip_destination_text.setText(String.valueOf(tripDestination.get(position)));
-        holder.trip_date_text.setText(String.valueOf(tripDate.get(position)));
-
+//        holder.trip_id_text.setText(String.valueOf(tripId.get(position)));
+//        holder.trip_name_text.setText(String.valueOf(tripName.get(position)));
+//        holder.trip_destination_text.setText(String.valueOf(tripDestination.get(position)));
+//        holder.trip_date_text.setText(String.valueOf(tripDate.get(position)));
+        holder.trip_id_text.setText("No " + (position + 1));
+        holder.trip_name_text.setText("Trip name: " + tripName.get(position));
+        holder.trip_destination_text.setText("Destination: " + tripDestination.get(position));
+        holder.trip_date_text.setText("Date: " + tripDate.get(position));
         String a = "";
         if (String.valueOf(tripRequireAssessement.get(position)).equals("1")) {
             a = "yes";
