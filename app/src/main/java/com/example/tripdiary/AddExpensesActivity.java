@@ -1,5 +1,6 @@
 package com.example.tripdiary;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -52,8 +53,15 @@ public class AddExpensesActivity extends AppCompatActivity implements AdapterVie
 
                 tripId = getIntent().getStringExtra("expensesTripID");
 
-                // Toast.makeText(AddExpensesActivity.this, ""+ tripId, Toast.LENGTH_SHORT).show();
+                if (amount.trim().isEmpty() ||
+                        time.trim().isEmpty() ||
+                        expense_type.isEmpty()) {
 
+                    displayRequireAlert();
+
+                }
+
+                // Toast.makeText(AddExpensesActivity.this, ""+ tripId, Toast.LENGTH_SHORT).show();
                 // Toast.makeText(AddExpensesActivity.this, ""+ time + amount + expense_type + tripId, Toast.LENGTH_SHORT).show();
 
                 AddExpenseToTrip(expense_type, amount, time, Integer.valueOf(tripId));
@@ -63,6 +71,14 @@ public class AddExpensesActivity extends AppCompatActivity implements AdapterVie
 
     }
 
+    private void displayRequireAlert() {
+        new android.app.AlertDialog.Builder(this).setTitle("Some thing wrong").setMessage("you need to fill all required fields").setNeutralButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        }).show();
+    }
 
     public void showDatePickerDialog3(View v) {
         DialogFragment newFragment = new DatePickerExpenseFragment();

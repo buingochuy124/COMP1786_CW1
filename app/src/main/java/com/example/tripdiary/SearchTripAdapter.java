@@ -56,18 +56,22 @@ public class SearchTripAdapter extends RecyclerView.Adapter<SearchTripAdapter.My
 //        holder.trip_name_text.setText(String.valueOf(tripName.get(position)));
 //        holder.trip_destination_text.setText(String.valueOf(tripDestination.get(position)));
 //        holder.trip_date_text.setText(String.valueOf(tripDate.get(position)));
+
+
         holder.trip_id_text.setText("No " + (position + 1));
         holder.trip_name_text.setText("Trip name: " + tripName.get(position));
         holder.trip_destination_text.setText("Destination: " + tripDestination.get(position));
         holder.trip_date_text.setText("Date: " + tripDate.get(position));
-        String a = "";
+
+
+        String check = "";
         if (String.valueOf(tripRequireAssessement.get(position)).equals("1")) {
-            a = "yes";
+            check = "yes";
         } else {
-            a = "no";
+            check = "no";
         }
-        a = "Risk Assessement: " + a;
-        holder.trip_requireAssessement_text.setText(a);
+        check = "Risk Assessement: " + check;
+        holder.trip_requireAssessement_text.setText(check);
 
 
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {

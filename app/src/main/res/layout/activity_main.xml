@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="72dp"
-        android:backgroundTint="@color/design_default_color_secondary_variant"
         android:clickable="true"
 
         app:layout_constraintBottom_toBottomOf="parent"

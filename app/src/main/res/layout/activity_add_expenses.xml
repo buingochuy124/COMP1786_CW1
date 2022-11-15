@@ -20,7 +20,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -46,7 +45,8 @@
         android:viewportWidth="24"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
 
     <EditText
         android:id="@+id/add_expense_amount_input"
