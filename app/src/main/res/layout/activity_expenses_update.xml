@@ -24,8 +24,8 @@
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="303dp"
+        android:layout_height="94dp"
         android:layout_marginStart="45dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="27dp"
@@ -78,8 +78,8 @@
 
     <EditText
         android:id="@+id/inputDate_ExpenseUpdate"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="313dp"
+        android:layout_height="88dp"
         android:layout_marginStart="47dp"
         android:layout_marginEnd="47dp"
         android:layout_marginBottom="44dp"
@@ -96,12 +96,13 @@
 
     <Button
         android:id="@+id/button_save_expense_update"
-        android:layout_width="101dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="30dp"
+        android:layout_width="196dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="50dp"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputDate_ExpenseUpdate" />
 

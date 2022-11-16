@@ -19,7 +19,7 @@ import java.time.LocalDate;
 public class ExpensesUpdateActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     String expensesId, expensesType, expensesAmount, expensesTime, tripId;
-    String[] typeExpenses = {"Food", "Travel", "Transport"};
+    String[] typeExpenses = {"Food", "Travel", "Transport", "Drink"};
     EditText inputDate_ExpenseUpdate, inputAmount_update, dateInput;
 
     @Override

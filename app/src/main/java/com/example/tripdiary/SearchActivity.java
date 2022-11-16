@@ -79,30 +79,6 @@ public class SearchActivity extends AppCompatActivity {
 
             }
         });
-
-
-//
-//        String text = tripNametext.getText().toString();
-//
-//        TripsInArrays(text);
-//
-//        //TripsInArrays(text);
-//        //Toast.makeText(this, "" + tripId + tripName + tripDescription + tripDate + tripRequireAssessement + tripDestination, Toast.LENGTH_SHORT).show();
-//
-//
-//        searchTripAdapter = new SearchTripAdapter(
-//                SearchActivity.this,
-//                this,
-//                tripId,
-//                tripName,
-//                tripDestination,
-//                tripDate,
-//                tripRequireAssessement,
-//                tripDescription);
-//
-//        recyclerView.setAdapter(searchTripAdapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
-
     }
 
     void TripsInArrays(String trip_name) {

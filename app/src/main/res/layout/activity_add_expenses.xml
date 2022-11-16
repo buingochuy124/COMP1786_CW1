@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".AddExpensesActivity">
 
+
     <EditText
         android:id="@+id/add_expense_time_input"
         android:layout_width="275dp"
@@ -18,7 +19,6 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_addExpenseToDb"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
 
     <TextView
         android:id="@+id/textView3"

@@ -18,7 +18,7 @@ import java.time.LocalDate;
 public class AddExpensesActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Button AddExpense_Button;
-    String[] typeExpenses = {"Food", "Travel", "Transport"};
+    String[] typeExpenses = {"Food", "Travel", "Transport", "Drink"};
     String tripId;
 
     @Override
@@ -63,8 +63,10 @@ public class AddExpensesActivity extends AppCompatActivity implements AdapterVie
 
                 // Toast.makeText(AddExpensesActivity.this, ""+ tripId, Toast.LENGTH_SHORT).show();
                 // Toast.makeText(AddExpensesActivity.this, ""+ time + amount + expense_type + tripId, Toast.LENGTH_SHORT).show();
+                else {
+                    AddExpenseToTrip(expense_type, amount, time, Integer.valueOf(tripId));
 
-                AddExpenseToTrip(expense_type, amount, time, Integer.valueOf(tripId));
+                }
 
             }
         });

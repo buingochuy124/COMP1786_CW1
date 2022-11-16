@@ -79,7 +79,7 @@ public class DbHelper extends SQLiteOpenHelper {
             } else {
                 a = "no";
             }
-            new AlertDialog.Builder(context).setMessage("Details entered: " +
+            new AlertDialog.Builder(context).setTitle("Added Successfully").setMessage("Details entered: " +
                     "\nName: " + name +
                     "\nDestination: " + destination +
                     "\nDate: " + date +
